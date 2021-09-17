@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CICD-Pipeline-Practice/static/css/main.a617e044.chunk.css",
+    "main.js": "/CICD-Pipeline-Practice/static/js/main.9c05ef72.chunk.js",
+    "main.js.map": "/CICD-Pipeline-Practice/static/js/main.9c05ef72.chunk.js.map",
+    "runtime-main.js": "/CICD-Pipeline-Practice/static/js/runtime-main.52db29f8.js",
+    "runtime-main.js.map": "/CICD-Pipeline-Practice/static/js/runtime-main.52db29f8.js.map",
+    "static/js/2.426cd5d2.chunk.js": "/CICD-Pipeline-Practice/static/js/2.426cd5d2.chunk.js",
+    "static/js/2.426cd5d2.chunk.js.map": "/CICD-Pipeline-Practice/static/js/2.426cd5d2.chunk.js.map",
+    "static/js/3.b9de0050.chunk.js": "/CICD-Pipeline-Practice/static/js/3.b9de0050.chunk.js",
+    "static/js/3.b9de0050.chunk.js.map": "/CICD-Pipeline-Practice/static/js/3.b9de0050.chunk.js.map",
+    "index.html": "/CICD-Pipeline-Practice/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/CICD-Pipeline-Practice/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.426cd5d2.chunk.js.LICENSE.txt": "/CICD-Pipeline-Practice/static/js/2.426cd5d2.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/CICD-Pipeline-Practice/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52db29f8.js",
+    "static/js/2.426cd5d2.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.9c05ef72.chunk.js"
+  ]
+}
