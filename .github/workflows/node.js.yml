@@ -11,43 +11,36 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [14.x]
-
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
-    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    
     - name: Install dependencies and build
       run: npm install && npm run build
       
   test:
-
     runs-on: ubuntu-latest
-    
     needs: build
-    
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
     - name: Run tests
       run: npm test
     
   deploy:
-  
     runs-on: ubuntu-latest
-    
     needs: test
-    
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
     - name: Deploy to gh-pages
       run: |
         git config --global user.name ${{secrets.ACTIONS_USERNAME}}
