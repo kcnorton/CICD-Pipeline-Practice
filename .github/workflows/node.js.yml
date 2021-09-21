@@ -25,21 +25,20 @@ jobs:
         cache: 'npm'
     - name: Install dependencies and build
       run: npm install && npm run build
+    - name: Share build inside workflow
+      uses: actions/upload-artifact@v1
+      with:
+        name: react-github-actions-build
+        path: build
       
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
     needs: build
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - name: Get build
+      uses: actions/download-artifact@v1
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        name: react-github-actions-build
     - name: Run tests
       run: npm test
     
@@ -47,8 +46,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
+    - name: Get build
+      uses: actions/download-artifact@v1
+      with:
+        name: react-github-actions-build
     - name: Deploy to gh-pages
       run: |
         git config --global user.name ${{secrets.ACTIONS_USERNAME}}
